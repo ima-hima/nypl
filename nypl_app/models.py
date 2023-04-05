@@ -1,3 +1,5 @@
+"""This module is unused. Included here for new features."""
+
 from django.db import models
 
 

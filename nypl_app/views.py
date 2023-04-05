@@ -11,8 +11,6 @@ from dotenv import load_dotenv
 
 
 class IndexView(TemplateView):
-    """docstring for IndexView"""
-
     template_name = "nyplsite/index.jinja"
 
 
