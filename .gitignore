@@ -1,0 +1,22 @@
+#Python
+__init__.py
+__pycache__
+
+#Django
+settings.py
+migrations
+.nypl_pgpass
+
+#passwords
+.env
+
+# other
+.DS_Store
+*.dSYM
+*.log
+*.prn
+*.xls
+*.xlsx
+*.txt
+*.xml
+
