@@ -63,9 +63,16 @@ def index(request):
                 }
                 r = requests.get(url=url, headers=headers, params=params)
                 for result in r.json()["nyplAPI"]["response"]["result"]:
-                    resource_types[result["typeOfResource"]] = (
-                        resource_types.get(result["typeOfResource"], 0) + 1
-                    )
+                    if "typeOfResource" not in result:
+                        resource_types["not specified"] = (
+                            resource_types.get("not specified", 0) + 1
+                        )
+                        # print('missing typeOfResource')
+                        # print(result)
+                    else:
+                        resource_types[result["typeOfResource"]] = (
+                            resource_types.get(result["typeOfResource"], 0) + 1
+                        )
             return render(
                 request,
                 "nyplsite/index.jinja",
